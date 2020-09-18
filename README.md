@@ -32,6 +32,7 @@ Ce repo à pour but d'expliquer l'installation et l'utilisation du simulateur [l
  - Si vous faite tourner votre ROS sur la même machine que votre simulateur, rentrer pour adresse "localhost:9090".
  - Si votre ROS tourne sur une autre machine, rentrer pour adresse l'ip de la machine suivi du port 9090 ex: "192.168.4.65:9090"
 <img src="images/simu_map.PNG" alt="alt text" width="500">
+
 5. Ignorer les autres onglets pour le moment, comme la simulation tourne en mode interactif, ces paramètres seront modifiables en cours de simulation.
 6. Cliquer sur "Submit". Votre simulation est prète.
 7. Cliquer sur votre simulation une fois, puis sur l'iconne lecture. 
