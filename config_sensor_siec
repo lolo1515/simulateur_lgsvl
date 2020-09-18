@@ -1,0 +1,16 @@
+[
+{
+"type": "Lidar", "name": "Lidar",
+            "params": {"LaserCount": 1, "MinDistance": 0.5, "MaxDistance": 25, "RotationFrequency": 15, "MeasurementsPerRotation": 700, "FieldOfView": 1, "CenterAngle": 0, "Compensated": true, "PointColor": "#ff000000", "Topic": "simulator/lidar", "Frame": "velodyne"},
+            "transform": {"x": 0, "y": 0.49, "z": -0.3679201, "pitch": 0, "yaw": 0, "roll": 0}
+},
+{
+"type": "Keyboard Control", "name": "Keyboard Car Control"
+},
+{"type": "Color Camera", "name": "Main Camera",
+            "params": {"Width": 1920, "Height": 1080, "Frequency": 15, "JpegQuality": 75, "FieldOfView": 50, "MinDistance": 0.1, "MaxDistance": 1000, "Topic": "/apollo/sensor/camera/traffic/image_short/compressed"},
+            "transform": {"x": 0, "y": 1.7, "z": -0.2, "pitch": 0, "yaw": 0, "roll": 0}},
+{
+"type": "Wheel Control", "name": "Wheel Car Control"
+}
+]
