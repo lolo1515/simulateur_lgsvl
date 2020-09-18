@@ -25,9 +25,17 @@ Ce repo à pour but d'expliquer l'installation et l'utilisation du simulateur [l
 ## Lancement de la simulation: 
 
 1. Cliquez sur l'onglet simulation dans le menu à gauche de votre écran.
-2. Cliquez sur "add new" 
+2. Cliquez sur "add new"
+3. Dans l'onglet général, donnez un nom à la simulation.
 <img src="images/simu_gene.PNG" alt="alt text" width="500">
+4. Dans l'onglet map et vehicles, cocher "RUN simulation in interractive mode", sélectionner la carte et la voiture à utiliser pour la simulation. Comme notre voiture dispose d'un pont ROS, il nous faut rentrer son adresse.
+ - Si vous faite tourner votre ROS sur la même machine que votre simulateur, rentrer pour adresse "localhost:9090".
+ - Si votre ROS tourne sur une autre machine, rentrer pour adresse l'ip de la machine suivi du port 9090 ex: "192.168.4.65:9090"
 <img src="images/simu_map.PNG" alt="alt text" width="500">
+5. Ignorer les autres onglets pour le moment, comme la simulation tourne en mode interactif, ces paramètres seront modifiables en cours de simulation.
+6. Cliquer sur "Submit". Votre simulation est prète.
+7. Cliquer sur votre simulation une fois, puis sur l'iconne lecture. 
+8. Revenez sur la fenètre du simulateur et piloter votre voiture!
 
 
 
