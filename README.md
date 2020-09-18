@@ -17,6 +17,7 @@ Ce repo à pour but d'expliquer l'installation et l'utilisation du simulateur [l
    - Cube town: https://assets.lgsvlsimulator.com/085da734088f2b584075fce2d1d478b98ca076eb/environment_CubeTown 
    - San Francisco: https://assets.lgsvlsimulator.com/29a5d0d9ef094a4b3e333b28eb48254b9f9ef7a1/environment_SanFrancisco
 <img src="images/add_map.PNG" alt="alt text" width="500">
+
 6. Cliquer maintenant sur "vehicles" dans le menu sur la gauche de votre écran et procédez de la même façon pour ajouter la voiture SIEC, vous le trouverez à "VOTRE_CHEMIN_PERSONEL\unitybuild02092020\AssetBundles\Vehicles\vehicle_voiture_siec", ou encore la jaguar de LGSVL à https://assets.lgsvlsimulator.com/d49c88a93b11b047a3e21e0c7d4b2ec6964fb16d/vehicle_Jaguar2015XE
 
 7. Editez le JSON du vehicle pour y ajouter les capteurs en cliquant sur la clé. Sélectionner "ROS" pour le type de pont, et copier le contenue du fichier config_sensor_siec dans le champs sensors. Cela va ajouter un lidar 2D et une camera à la voiture, ainsi qu'un moyen de la controler. Plus d'option pour le réglage de capteurs peuvent être explorées [ici](https://www.lgsvlsimulator.com/docs/sensor-json-options/). Une fois cela fait, cliquez sur submit.
@@ -29,6 +30,7 @@ Ce repo à pour but d'expliquer l'installation et l'utilisation du simulateur [l
 2. Cliquez sur "add new"
 3. Dans l'onglet général, donnez un nom à la simulation.
 <img src="images/simu_gene.PNG" alt="alt text" width="500">
+
 4. Dans l'onglet map et vehicles, cocher "RUN simulation in interractive mode", sélectionner la carte et la voiture à utiliser pour la simulation. Comme notre voiture dispose d'un pont ROS, il nous faut rentrer son adresse.
  - Si vous faite tourner votre ROS sur la même machine que votre simulateur, rentrer pour adresse "localhost:9090".
  - Si votre ROS tourne sur une autre machine, rentrer pour adresse l'ip de la machine suivi du port 9090 ex: "192.168.4.65:9090"
