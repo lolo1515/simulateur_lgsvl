@@ -22,6 +22,7 @@ Ce repo à pour but d'expliquer l'installation et l'utilisation du simulateur [l
 
 7. Editez le JSON du vehicle pour y ajouter les capteurs en cliquant sur la clé. Sélectionner "ROS" pour le type de pont, et copier le contenue du fichier config_sensor_siec dans le champs sensors. Cela va ajouter un lidar 2D et une camera à la voiture, ainsi qu'un moyen de la controler. Plus d'option pour le réglage de capteurs peuvent être explorées [ici](https://www.lgsvlsimulator.com/docs/sensor-json-options/). Une fois cela fait, cliquez sur submit.
 <img src="images/add_veh.PNG" alt="alt text" width="500">
+
 8. Vous avez terminez la procédure d'installation.
 
 ## Lancement de la simulation: 
