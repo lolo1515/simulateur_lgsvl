@@ -40,7 +40,48 @@ Ce repo à pour but d'expliquer l'installation et l'utilisation du simulateur [l
 5. Ignorer les autres onglets pour le moment, comme la simulation tourne en mode interactif, ces paramètres seront modifiables en cours de simulation.
 6. Cliquer sur "Submit". Votre simulation est prète.
 7. Cliquer sur votre simulation une fois, puis sur l'iconne lecture. 
-8. Revenez sur la fenètre du simulateur et piloter votre voiture!
+8. Revenez sur la fenètre du simulateur et piloter votre voiture avec les flèches de votre clavier!
+
+##  Fonctionnement avec ROS
+
+Ce simulateur est conçu pour fonctionner avec le Robot Operating System ou ROS, la distribution [Melodic](http://wiki.ros.org/melodic/Installation/Ubuntu) de ROS est conseillée. ROS est un middleware qui gère les échanges entrent différent programmes appelés noeuds. Les informations échangé par ces noeuds peuvrent être d'une multitude de types/format différents et sont appelés topics. Chaque noeuds peux partagé des informations en publiant des topics, et recevoir des informations en souscrivant aux topics d'autres noeuds. 
+
+### Communication avec ROS
+
+La communication entre le simulateur et votre system ROS se fait par l'intermédiaire d'un websocket qui doit être lancé par votre PC hote (celui qui fait tourné ROS si différent de celui utilisé pour le simulateur). Pour mettre en place ce websocket il vous faudrat installer le package [rosbridge_server](http://wiki.ros.org/rosbridge_suite/Tutorials/RunningRosbridge):
+```
+sudo apt-get install ros-melodic-rosbridge-suite
+```
+
+### Vérification
+
+En éditant le fichier JSON de votre voiture vous avez ajouter différent capteur tel que le lidar par example. Ce lidar va publier un topic de type [POINTCLOUD2](http://docs.ros.org/melodic/api/sensor_msgs/html/msg/PointCloud2.html) appelé "simulator/lidar". Pour vérifier que tout fonctionne bien, nous allons essayer d'observer un topic publier par le simulateur via un visionneur ros appelé [RVIZ](http://wiki.ros.org/rviz). 
+
+1. RVIZ est probablement déjà installer sur votre système car compris dans l'installation de ROS desktop mais vérifier en essayant de la lancer, sinon installé le.
+Pour lancer RVIZ, démarrer ROS:
+```
+roscore
+```
+Puis dans un autre terminal RVIZ:
+```
+rviz
+```
+2. Dans un autre terminal, lancer votre websocket pour la communication simulateur <==> ROS.
+```
+roslaunch rosbridge_server rosbridge_websocket.launch
+``` 
+
+3. Lancer votre simulation via l'interface du simulateur LGSVL. Attention à l'adresse du pont de communication cf "lancement simulation 4".
+
+4. Retourer sur l'interface de RVIZ et ajouter un nouveau topic de type pointcloud2.
+
+5. Dans les paramètres de ce nouveau topic, sélectionner topic name et cliquez sur simulator/lidar
+
+6. Dans le menu global option, taper "velodyne" pour fixed frame.
+
+7. Déplacer votre voiture et observer le scan lidar évoluer.
+
+
 
 
 
