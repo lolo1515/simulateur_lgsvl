@@ -72,15 +72,34 @@ roslaunch rosbridge_server rosbridge_websocket.launch
 ``` 
 
 3. Lancer votre simulation via l'interface du simulateur LGSVL. Attention à l'adresse du pont de communication cf "lancement simulation 4".
+   
+<img src="images/Capture_bridge.PNG" alt="alt text" width="500">
 
-4. Retourer sur l'interface de RVIZ et ajouter un nouveau topic de type pointcloud2.
+4. Vérifiez la connection:
+ - via le simulateur en cliquant sur l'icone "prise" en bas de l'écran, le status doit être "connected"
+ - via ROS en ouvrant un terminal et en vérifiant par exemple que le topic 'simulator/lidar" est publié. Pour afficher la liste des topics échangées taper:
+   ```
+   rostopic list
+   ```
+<img src="images/rostopic.png" alt="alt text" width="500">
 
-5. Dans les paramètres de ce nouveau topic, sélectionner topic name et cliquez sur simulator/lidar
-
-6. Dans le menu global option, taper "velodyne" pour fixed frame.
+5. Paramétrez RVIZ:
+ - Retourer sur l'interface de RVIZ et ajouter un nouveau topic de type pointcloud2.
+ - Dans les paramètres de ce nouveau topic, sélectionner topic name et cliquez sur simulator/lidar
+ - Dans le menu global option, taper "velodyne" pour fixed frame.
+<img src="images/rviz.png" alt="alt text" width="500">
 
 7. Déplacer votre voiture et observer le scan lidar évoluer.
 
+## Dévellopement 
+
+### Créer une nouvelle carte/véhicule pour LGSVL
+
+### Créer un mesh unity à partir d'un environnement réel
+
+#### Création d'un nuage de point coloré
+#### Edition via MeshLAB
+#### Intégration au simulateur via unity
 
 
 
